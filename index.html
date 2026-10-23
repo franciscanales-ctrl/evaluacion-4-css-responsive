@@ -1,18 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patrón Mostly Fluid</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad Número II</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <main class="container">
-    <header class="caja c1">C1 · Bienvenidos</header>
-    <section class="caja c2">C2 · Actividades de aprendizaje</section>
-    <section class="caja c3">C3 · Lectura</section>
-    <section class="caja c4">C4 · Matemáticas</section>
-    <section class="caja c5">C5 · Ciencias</section>
-  </main>
+
+    <aside id="menu" class="menu">
+        <nav>
+            <button class="opcion activa" id="inicio">Inicio</button>
+            <button class="opcion" id="formulario">Formulario</button>
+        </nav>
+    </aside>
+
+    <button id="toggleMenu" class="toggle-menu" aria-label="Mostrar u ocultar menú">
+        ☰
+    </button>
+
+    <main id="contenido" class="contenido">
+        <button id="saludar" class="boton-rosa">Saludar</button>
+    </main>
+
 </body>
 </html>
