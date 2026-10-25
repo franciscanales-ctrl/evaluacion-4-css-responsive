@@ -4,26 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad Número II</title>
+    <meta name="description" content="Materiales didácticos digitales para docentes, estudiantes y familias.">
+    <title>Aula Creativa Digital</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
 
-    <aside id="menu" class="menu">
-        <nav>
-            <button class="opcion activa" id="inicio">Inicio</button>
-            <button class="opcion" id="formulario">Formulario</button>
-        </nav>
-    </aside>
+    <header class="encabezado">
+        <a href="#inicio" class="logo">🌸 Aula Creativa</a>
+        <p>Materiales didácticos digitales</p>
+    </header>
 
-    <button id="toggleMenu" class="toggle-menu" aria-label="Mostrar u ocultar menú">
-        ☰
-    </button>
+    <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#producto">Producto</a>
+        <a href="#nosotros">Sobre nosotros</a>
+        <a href="#contacto">Contáctanos</a>
+    </nav>
 
-    <main id="contenido" class="contenido">
-        <button id="saludar" class="boton-rosa">Saludar</button>
+    <main>
+        <section id="inicio" class="portada">
+            <div class="portada-texto">
+                <p class="etiqueta">¡Aprender es una aventura!</p>
+                <h1>Recursos educativos para grandes ideas</h1>
+                <p>
+                    Descubre fichas, cuentos, planes de clase y materiales
+                    digitales que inspiran el aprendizaje.
+                </p>
+                <a href="#producto" class="boton">Ver productos</a>
+            </div>
+            <div class="portada-imagen" aria-label="Materiales escolares">
+                📚 ✏️ 🎨
+            </div>
+        </section>
+
+        <section id="producto" class="seccion">
+            <h2>Nuestros productos</h2>
+            <p class="subtitulo">Materiales digitales listos para utilizar.</p>
+
+            <div class="catalogo">
+                <article class="tarjeta">
+                    <div class="producto-imagen">📖</div>
+                    <h3>Fichas de lectura</h3>
+                    <p>Actividades para fortalecer la lectura y escritura.</p>
+                    <p class="precio">C$ 50.00</p>
+                    <button class="boton agregar"
+                        data-producto="Fichas de lectura" data-precio="50">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="producto-imagen">📋</div>
+                    <h3>Planes diarios</h3>
+                    <p>Plantillas para organizar las clases.</p>
+                    <p class="precio">C$ 60.00</p>
+                    <button class="boton agregar"
+                        data-producto="Planes diarios" data-precio="60">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="producto-imagen">🖍️</div>
+                    <h3>Libros para colorear</h3>
+                    <p>Dibujos y actividades creativas para niños.</p>
+                    <p class="precio">C$ 50.00</p>
+                    <button class="boton agregar"
+                        data-producto="Libros para colorear" data-precio="50">
+                        Agregar al carrito
+                    </button>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="producto-imagen">📚</div>
+                    <h3>Cuentos infantiles</h3>
+                    <p>Lecturas ilustradas con actividades educativas.</p>
+                    <p class="precio">C$ 40.00</p>
+                    <button class="boton agregar"
+                        data-producto="Cuentos infantiles" data-precio="40">
+                        Agregar al carrito
+                    </button>
+                </article>
+            </div>
+
+            <div class="carrito">
+                <h3>🛒 Mi carrito</h3>
+                <p>Productos seleccionados: <strong id="cantidad">0</strong></p>
+                <ul id="listaCarrito"></ul>
+                <p>Total: <strong id="total">C$ 0.00</strong></p>
+                <button id="vaciarCarrito" class="boton boton-secundario">
+                    Vaciar carrito
+                </button>
+            </div>
+        </section>
+
+        <section id="nosotros" class="seccion nosotros">
+            <h2>Sobre nosotros</h2>
+            <p>
+                En Aula Creativa Digital creemos que aprender puede ser
+                divertido, creativo y accesible. Ofrecemos materiales
+                educativos digitales para apoyar el trabajo de docentes,
+                estudiantes y familias.
+            </p>
+            <div class="valores">
+                <div>💡 <strong>Creatividad</strong></div>
+                <div>📚 <strong>Aprendizaje</strong></div>
+                <div>💗 <strong>Compromiso educativo</strong></div>
+            </div>
+        </section>
+
+        <section id="contacto" class="seccion contacto">
+            <h2>Contáctanos</h2>
+            <p class="subtitulo">Escríbenos si necesitas más información.</p>
+
+            <form id="formContacto" class="form-contacto">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text"
+                    placeholder="Escribe tu nombre" required>
+
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email"
+                    placeholder="ejemplo@correo.com" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4"
+                    placeholder="¿Cómo podemos ayudarte?" required></textarea>
+
+                <button type="submit" class="boton">Enviar mensaje</button>
+                <p id="respuestaContacto" role="status"></p>
+            </form>
+        </section>
     </main>
+
+    <footer class="pie">
+        <p>🌸 Aula Creativa Digital</p>
+        <p>Materiales que inspiran el aprendizaje.</p>
+        <p>© 2026 · Proyecto académico de diseño web</p>
+    </footer>
 
 </body>
 </html>
