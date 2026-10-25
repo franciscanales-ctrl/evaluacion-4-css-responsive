@@ -150,6 +150,63 @@ body {
 
     .campos {
         grid-template-columns: 1fr;
+        
+/* Panel administrativo: tabla de registros */
+.tabla-registros {
+    width: min(100%, 600px);
+    margin-top: 30px;
+    border: 1px solid #222;
+    border-collapse: collapse;
+    background: white;
+    color: #222;
+    font-family: Georgia, serif;
+    font-size: 13px;
+}
+
+.tabla-registros th,
+.tabla-registros td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    overflow-wrap: anywhere;
+}
+
+.tabla-registros th {
+    font-style: italic;
+    border-bottom: 2px solid #222;
+}
+
+.tabla-registros tbody tr:hover {
+    background: #fff0f5;
+}
+
+.eliminar {
+    background: #f00058;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.eliminar:hover {
+    background: #b80040;
+}
+
+@media (max-width: 600px) {
+    .tabla-registros {
+        font-size: 11px;
+    }
+
+    .tabla-registros th,
+    .tabla-registros td {
+        padding: 5px 3px;
+    }
+}
+
     }
 
     .formulario-dinamico input[type="email"] {
